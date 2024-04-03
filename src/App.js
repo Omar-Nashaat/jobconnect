@@ -17,7 +17,7 @@ const routes = createBrowserRouter([
       { path: 'login', element: <Login /> },
       // { path: 'home', element: <Home /> },
       { path: 'home', element: <AnotherHome /> },
-      { path: '', element: <Home /> },
+      { path: '', element: <AnotherHome /> },
       // {
       //   path: 'home', element:
       //     <ProtectedRoutes>
