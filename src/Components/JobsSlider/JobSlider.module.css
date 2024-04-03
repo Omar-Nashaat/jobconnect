@@ -1,4 +1,22 @@
-.jobCard{
+.jobCard {
     border: 2px solid transparent;
-    border-color: #fa4d04;
+    border-color: #ffbb1c;
+}
+
+.checkIcon {
+    color: #ffbb1c;
+}
+
+.jobBtnApply {
+    background-color: #ffbb1c;
+    padding: 5px 20px;
+}
+
+.jobBtnApply:hover {
+    background-color: #ffbb1c;
+}
+
+.jobBtnBlack {
+    background-color: black;
+    color: white;
 }

@@ -4,6 +4,7 @@ import Login from './Components/Login/Login'
 import Layout from './Components/Layout/Layout'
 import Register from './Components/Register/Register'
 import Home from './Components/Home/Home'
+import AnotherHome from './Components/AnotherHome/AnotherHome'
 // import Home from './Components/Home/Home'
 // import { tokenContext } from './Context/token'
 
@@ -14,7 +15,8 @@ const routes = createBrowserRouter([
     path: '', element: <Layout />, children: [
       { path: 'register', element: <Register /> },
       { path: 'login', element: <Login /> },
-      { path: 'home', element: <Home /> },
+      // { path: 'home', element: <Home /> },
+      { path: 'home', element: <AnotherHome /> },
       { path: '', element: <Home /> },
       // {
       //   path: 'home', element:
@@ -29,7 +31,7 @@ const routes = createBrowserRouter([
       //     </ProtectedRoutes>
       // },
       // { path: '*', element: <NotFound /> },
-    ]
+    ],
   }
 ])
 
