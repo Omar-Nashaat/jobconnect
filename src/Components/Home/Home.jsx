@@ -58,70 +58,11 @@ export default function Home() {
                 <div className=' title text-center mt-5'>
                     <h2>Available<span style={{ color: '#fa4d04' }}> Jobs</span></h2>
                 </div>
-                <div className="jobsCards">
+                <div className="jobsCards mt-4">
                     <JobsSlider />
-                    {/* <div class="row gy-3">
-                        <div class="col-lg-4 pb-4 service-card">
-                            <div class="text-center bg-white rounded-2 p-4 shadow-sm">
-                                <div class="service-icon d-flex justify-content-center align-items-center m-auto">
-                                    <i class="fa-solid fa-briefcase"></i>
-                                </div>
-                                <h4 class="pt-4 pb-1">WEB DESIGN</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat!
-                                    Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 pb-4 service-card">
-                            <div class="text-center bg-white rounded-2 p-4 shadow-sm">
-                                <div class="service-icon d-flex justify-content-center align-items-center m-auto">
-                                    <i class="fa-solid fa-list-check"></i>
-                                </div>
-                                <h4 class="pt-4 pb-1">WEB DEVELOPMENT</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat!
-                                    Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 pb-4 service-card">
-                            <div class="text-center bg-white rounded-2 p-4 shadow-sm">
-                                <div class="service-icon d-flex justify-content-center align-items-center m-auto">
-                                    <i class="fa-solid fa-signal"></i>
-                                </div>
-                                <h4 class="pt-4 pb-1">PHOTOGRAPHY</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat!
-                                    Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 pb-4 service-card">
-                            <div class="text-center bg-white rounded-2 p-4 shadow-sm">
-                                <div class="service-icon d-flex justify-content-center align-items-center m-auto">
-                                    <i class="fa-solid fa-glasses"></i>
-                                </div>
-                                <h4 class="pt-4 pb-1">RESPONSIVE DESIGN</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat!
-                                    Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 pb-4 service-card">
-                            <div class="text-center bg-white rounded-2 p-4 shadow-sm">
-                                <div class="service-icon d-flex justify-content-center align-items-center m-auto">
-                                    <i class="fa-regular fa-sun"></i>
-                                </div>
-                                <h4 class="pt-4 pb-1">GRAPHIC DESIGN</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat!
-                                    Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 pb-4 service-card">
-                            <div class="text-center bg-white rounded-2 p-4 shadow-sm">
-                                <div class="service-icon d-flex justify-content-center align-items-center m-auto">
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                </div>
-                                <h4 class="pt-4 pb-1">MARKETING SERVICES</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat!
-                                    Quia, provident vitae! Magni tempora perferendis eum non provident.</p>
-                            </div>
-                        </div>
-                    </div> */}
+                </div>
+                <div>
+                    <button className={style.showMoreBtn + ' btn d-block m-auto mt-5'}>Show More Jobs</button>
                 </div>
             </div>
         </div>

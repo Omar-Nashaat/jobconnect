@@ -46,3 +46,13 @@ a:hover {
     border: 1px transparent solid;
     border-radius: 10px;
 }
+
+.showMoreBtn {
+    background-color: #fa4d04;
+    color: white;
+}
+
+.showMoreBtn:hover {
+    background-color: #fa4d04;
+    color: white;
+}
