@@ -1,0 +1,48 @@
+a:hover {
+    color: white;
+}
+
+.home {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./what-does-background-checks-show-78e58106.jpeg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.first {
+    margin-top: 120px;
+}
+
+.first h2 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.first p {
+    font-size: 18px;
+}
+
+.first button {
+    color: white;
+    padding: 7px 20px !important;
+    font-size: 18px;
+    transition: all ease-in-out 0.2s;
+    background-color: #fa4d04;
+    border: #fa4d04;
+}
+
+.second {
+    margin-top: 150px;
+    padding-left: 70px;
+}
+
+.first button:hover {
+    background-color: #fa4d04;
+    border: #fa4d04;
+}
+
+.card {
+    border: 1px transparent solid;
+    border-radius: 10px;
+}

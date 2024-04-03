@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+// import React, { useContext, useEffect } from 'react'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Login from './Components/Login/Login'
+import Layout from './Components/Layout/Layout'
+import Register from './Components/Register/Register'
+import Home from './Components/Home/Home'
+// import Home from './Components/Home/Home'
+// import { tokenContext } from './Context/token'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const routes = createBrowserRouter([
+  {
+    path: '', element: <Layout />, children: [
+      { path: 'register', element: <Register /> },
+      { path: 'login', element: <Login /> },
+      { path: 'home', element: <Home /> },
+      { path: '', element: <Home /> },
+      // {
+      //   path: 'home', element:
+      //     <ProtectedRoutes>
+      //       <Products />
+      //     </ProtectedRoutes>
+      // },
+      // {
+      //   path: '', element:
+      //     <ProtectedRoutes>
+      //       <Home />
+      //     </ProtectedRoutes>
+      // },
+      // { path: '*', element: <NotFound /> },
+    ]
+  }
+])
+
+
+
+export default function App() {
+
+  // const { setToken, token } = useContext(tokenContext)
+
+  // useEffect(() => {
+  //   if (localStorage.getItem("tkn") != null) {
+  //     setToken(localStorage.getItem("tkn"))
+  //   }
+  // }, [])
+
+  return <RouterProvider router={routes}>
+
+  </RouterProvider>
 }
-
-export default App;
