@@ -10,7 +10,7 @@ export default function JobsSlider() {
         speed: 1200,
         slidesToShow: 3,
         slidesToScroll: 1,
-        // autoplay: true,
+        autoplay: true,
     };
     return (
         <Slider {...settings}>
