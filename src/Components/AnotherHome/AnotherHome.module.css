@@ -18,7 +18,92 @@ body {
 
 .moreBtn {
     background-color: #ffbb1c;
+    font-size: 18px;
 }
+
 .moreBtn:hover {
+    background-color: #ffbb1c;
+}
+
+.join {
+    margin-top: 150px;
+}
+
+.findJob {
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 50px;
+
+}
+
+.postJob {
+    margin-top: 20px;
+    color: black;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    padding: 50px;
+    background-color: #ffbb1c;
+}
+
+.joinBtn {
+    background-color: #ffbb1c;
+    font-size: 18px;
+    color: white;
+}
+
+.joinBtn:hover {
+    background-color: #ffbb1c;
+    color: white;
+}
+
+.postBtn {
+    background-color: #212121;
+    font-size: 18px;
+    color: white;
+}
+
+.postBtn:hover {
+    background-color: #212121;
+    color: white;
+}
+
+.upperFooterContent {
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+}
+
+.whiteLine {
+    display: block;
+    margin: auto;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+}
+
+.lowerFooterContent {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footerAdderss {
+    margin-left: 250px;
+}
+
+.footerPrivacy {
+    margin-right: 200px;
+}
+
+.chatBtn {
+    background-color: #ffbb1c;
+    font-size: 18px;
+}
+
+.chatBtn:hover {
     background-color: #ffbb1c;
 }
