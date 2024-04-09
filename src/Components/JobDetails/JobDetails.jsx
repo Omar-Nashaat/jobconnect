@@ -46,7 +46,7 @@ export default function JobDetails() {
                             </div>
                         </div>
                     </div>
-                    <button className={style.submitBtn + ' btn mt-4 w-75 d-block m-auto p-2'}>Apply By Your CV</button>
+                    <button className={style.submitBtn + ' btn mt-4 w-50 d-block m-auto p-2'}>Apply By Your CV</button>
                 </div>
             </div>
         </div>
