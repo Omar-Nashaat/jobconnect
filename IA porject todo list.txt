@@ -8,4 +8,3 @@
 - jobpage (recruiter name, jobType, salary, creation date, description, num of apps) attach cv
 - EmployerPage (postjob,reviewApps and accept or reject) job removed if accepted
 - Employer and job seeker can communicate if the proposal is accepted.
-- 

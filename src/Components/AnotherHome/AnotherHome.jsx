@@ -75,7 +75,9 @@ export default function AnotherHome() {
                         <p className={style.footerAdderss + ' mt-4'}>Nasr City , 854/12 2024 Nashaat all rights reserved</p>
                         <p className={style.footerPrivacy + ' mt-4'}>Privacy | Terms of Service</p>
                         <button className={style.chatBtn + ' btn d-block m-auto mt-3 d-flex'}>
-                            <div>Chat with us</div>
+                            <div>
+                                Chat with us
+                            </div>
                         </button>
                     </div>
                 </div>
