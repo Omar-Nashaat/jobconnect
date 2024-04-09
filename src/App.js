@@ -5,6 +5,7 @@ import Layout from './Components/Layout/Layout'
 import Register from './Components/Register/Register'
 import Home from './Components/Home/Home'
 import AnotherHome from './Components/AnotherHome/AnotherHome'
+import JobDetails from './Components/JobDetails/JobDetails'
 // import Home from './Components/Home/Home'
 // import { tokenContext } from './Context/token'
 
@@ -17,6 +18,7 @@ const routes = createBrowserRouter([
       { path: 'login', element: <Login /> },
       // { path: 'home', element: <Home /> },
       { path: 'home', element: <AnotherHome /> },
+      { path: 'JobDetails', element: <JobDetails /> },
       { path: '', element: <AnotherHome /> },
       // {
       //   path: 'home', element:

@@ -73,7 +73,7 @@ export default function AnotherHome() {
                             <h5 className='mt-3'>FindPlus</h5>
                         </div>
                         <p className={style.footerAdderss + ' mt-4'}>Nasr City , 854/12 2024 Nashaat all rights reserved</p>
-                        <p className={style.footerPrivacy + ' mt-4'}>Privacy | Terms of Service</p>
+                        <p className={style.footerPrivacy + ' mt-4 ps-1'}>Privacy | Terms of Service</p>
                         <button className={style.chatBtn + ' btn d-block m-auto mt-3 d-flex'}>
                             <div>
                                 Chat with us
