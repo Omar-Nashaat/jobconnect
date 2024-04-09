@@ -1,11 +1,14 @@
+(done):
 - landing page (home)
 - register
 - login
+- AlljobPage (filter, save job)
 - jobpage (recruiter name, jobType, salary, creation date, description, num of apps) attach cv
 
+
+(to do):
 - admin page (create,list,update,delete) employers
 - add job (recruiter name, jobType, salary, creation date, description, num of apps)
 - adminPopup (accept,delete) jobs
-- AlljobPage (filter, save job)
 - EmployerPage (postjob,reviewApps and accept or reject) job removed if accepted
 - Employer and job seeker can communicate if the proposal is accepted.

@@ -6,6 +6,7 @@ import Register from './Components/Register/Register'
 import Home from './Components/Home/Home'
 import AnotherHome from './Components/AnotherHome/AnotherHome'
 import JobDetails from './Components/JobDetails/JobDetails'
+import AllJobs from './Components/AllJobs/AllJobs'
 // import Home from './Components/Home/Home'
 // import { tokenContext } from './Context/token'
 
@@ -19,6 +20,7 @@ const routes = createBrowserRouter([
       // { path: 'home', element: <Home /> },
       { path: 'home', element: <AnotherHome /> },
       { path: 'JobDetails', element: <JobDetails /> },
+      { path: 'AllJobs', element: <AllJobs /> },
       { path: '', element: <AnotherHome /> },
       // {
       //   path: 'home', element:
