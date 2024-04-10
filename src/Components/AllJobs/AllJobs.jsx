@@ -12,6 +12,7 @@ export default function AllJobs() {
                             <option selected>Job Type</option>
                             <option value="1">Full Time</option>
                             <option value="2">Part Time</option>
+                            <option value="2">Remote</option>
                         </select>
                     </div>
                     <div className="col-md-4">
