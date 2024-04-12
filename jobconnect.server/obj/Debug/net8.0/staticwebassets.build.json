@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "nFetswTtAQqMJ7+RNtLkXCdKpDkiS5qa8rKFJRkEatE=",
+  "Source": "jobconnect.server",
+  "BasePath": "_content/jobconnect.server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
