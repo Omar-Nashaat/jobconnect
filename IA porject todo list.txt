@@ -5,11 +5,10 @@
 - AlljobPage (filter, save job)
 - jobpage (recruiter name, jobType, salary, creation date, description, num of apps) attach cv
 - admin page (create,list,update,delete) employers
-
+- EmployerPage (postjob,reviewApps and accept or reject) job removed if accepted.
+- add job (recruiter name, jobType, salary, description).
 
 
 (to do):
-- EmployerPage (postjob,reviewApps and accept or reject) job removed if accepted.
-- add job (recruiter name, jobType, salary, creation date, description, num of apps).
-- adminPopup (accept,delete) jobs.
+- adminAcceptenance (accept,delete) jobs.
 - Employer and job seeker can communicate if the proposal is accepted.

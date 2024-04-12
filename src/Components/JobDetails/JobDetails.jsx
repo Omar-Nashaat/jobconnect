@@ -46,7 +46,35 @@ export default function JobDetails() {
                             </div>
                         </div>
                     </div>
-                    <button className={style.submitBtn + ' btn mt-4 w-50 d-block m-auto p-2'}>Apply By Your CV</button>
+                    {/* <button className={style.submitBtn + ' btn mt-4 w-50 d-block m-auto p-2'}>Apply By Your CV</button> */}
+
+                    {/* start post job modal */}
+                    <button type="button" class={style.submitBtn + ' btn mt-4 w-50 d-block m-auto p-2'} data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Apply By Your CV
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content bg-dark text-white">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Upload Your CV</h1>
+                                    <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="input-group mb-3">
+                                            <input type="file" class="form-control" id="inputGroupFile02" input/>
+                                                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* end post job modal */}
                 </div>
             </div>
         </div>
