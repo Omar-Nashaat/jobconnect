@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "nFetswTtAQqMJ7+RNtLkXCdKpDkiS5qa8rKFJRkEatE=",
-  "Source": "jobconnect.server",
-  "BasePath": "_content/jobconnect.server",
+  "Hash": "szjmuiIsj5/h8YNgr0psnIbWA1uVOgZnfkrkJu+S1Fs=",
+  "Source": "Jobconnect",
+  "BasePath": "_content/Jobconnect",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

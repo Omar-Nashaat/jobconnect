@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\omar\\Downloads\\Jobconnect\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A0E7F3BE-2974-4715-ABF0-AC2A82A75EBF}|Jobconnect.csproj|c:\\users\\omar\\downloads\\jobconnect\\models\\communication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0E7F3BE-2974-4715-ABF0-AC2A82A75EBF}|Jobconnect.csproj|solutionrelative:models\\communication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0E7F3BE-2974-4715-ABF0-AC2A82A75EBF}|Jobconnect.csproj|c:\\users\\omar\\downloads\\jobconnect\\models\\proposal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0E7F3BE-2974-4715-ABF0-AC2A82A75EBF}|Jobconnect.csproj|solutionrelative:models\\proposal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0E7F3BE-2974-4715-ABF0-AC2A82A75EBF}|Jobconnect.csproj|c:\\users\\omar\\downloads\\jobconnect\\models\\savedjobs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0E7F3BE-2974-4715-ABF0-AC2A82A75EBF}|Jobconnect.csproj|solutionrelative:models\\savedjobs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Communication.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\Downloads\\Jobconnect\\Models\\Communication.cs",
+              "RelativeDocumentMoniker": "Models\\Communication.cs",
+              "ToolTip": "C:\\Users\\omar\\Downloads\\Jobconnect\\Models\\Communication.cs",
+              "RelativeToolTip": "Models\\Communication.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T17:14:55.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SavedJobs.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\Downloads\\Jobconnect\\Models\\SavedJobs.cs",
+              "RelativeDocumentMoniker": "Models\\SavedJobs.cs",
+              "ToolTip": "C:\\Users\\omar\\Downloads\\Jobconnect\\Models\\SavedJobs.cs",
+              "RelativeToolTip": "Models\\SavedJobs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T17:07:28.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Proposal.cs",
+              "DocumentMoniker": "C:\\Users\\omar\\Downloads\\Jobconnect\\Models\\Proposal.cs",
+              "RelativeDocumentMoniker": "Models\\Proposal.cs",
+              "ToolTip": "C:\\Users\\omar\\Downloads\\Jobconnect\\Models\\Proposal.cs",
+              "RelativeToolTip": "Models\\Proposal.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T17:04:41.556Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

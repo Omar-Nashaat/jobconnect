@@ -1,6 +1,0 @@
-@jobconnect.server_HostAddress = http://localhost:5056
-
-GET {{jobconnect.server_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
