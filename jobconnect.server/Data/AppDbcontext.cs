@@ -1,59 +1,27 @@
-﻿using Jobconnect.Models;
-using JobConnect.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using JobConnect.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
-namespace Jobconnect.Data
+namespace JobConnect.Data
 {
-    public class AppDbcontext : IdentityDbContext<AppUser>
+    public class AppDbcontext : DbContext
     {
-        public AppDbcontext(DbContextOptions<AppDbcontext> options) : base(options)
-        {
-        }
 
         public DbSet<User> Users { get; set; }
-        public DbSet<Employer> Employers { get; set; }
-        public DbSet<Job> Jobs { get; set; }
-        public DbSet<JobSeeker> JobSeeker { get; set; }
-        public DbSet<Proposal> Proposal { get; set; }
-        public DbSet<SavedJobs> SavedJobs { get; set; }
-        public DbSet<Communication> Communication { get; set; }
+        public AppDbcontext(DbContextOptions<AppDbcontext> options) : base(options) { }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            modelBuilder.Entity<Proposal>()
-                .HasOne(p => p.Job)
-                .WithMany()
-                .HasForeignKey(p => p.JobID)
-                .OnDelete(DeleteBehavior.Restrict); // Specify the desired behavior here
+            base.OnModelCreating(builder);
+            builder.Entity<User>().Property(U => U.Name).IsRequired().HasMaxLength(25);
+            builder.Entity<User>().Property(U => U.Email).IsRequired().HasMaxLength(30);
+            builder.Entity<User>().Property(U => U.PhoneNumber).IsRequired().HasMaxLength(25);
+            builder.Entity<User>().Property(U => U.Address).IsRequired().HasMaxLength(30);
 
-            modelBuilder.Entity<SavedJobs>()
-                .HasOne(s => s.JobSeeker)
-                .WithMany()
-                .HasForeignKey(s => s.JobSeekerID)
-                .OnDelete(DeleteBehavior.Restrict); // Specify the desired behavior here
+            builder.Entity<User>().HasOne(U => U.Role).WithMany().HasForeignKey(U => U.UserRoleId);
 
-            modelBuilder.Entity<Communication>()
-                .HasOne(c => c.Sender)
-                .WithMany()
-                .HasForeignKey(c => c.SenderID)
-                .OnDelete(DeleteBehavior.Restrict); // Specify the desired behavior here
-
-            modelBuilder.Entity<Communication>()
-                .HasOne(c => c.Recipient)
-                .WithMany()
-                .HasForeignKey(c => c.RecipientID)
-                .OnDelete(DeleteBehavior.Restrict); // Specify the desired behavior here
-
-            modelBuilder.Entity<Communication>()
-                .HasOne(c => c.Proposal)
-                .WithMany()
-                .HasForeignKey(c => c.ProposalID)
-                .OnDelete(DeleteBehavior.Restrict); // Specify the desired behavior here
-
-            // Other configurations...
-
-            base.OnModelCreating(modelBuilder);
         }
+        public DbSet<User> User { get; set; }
+        public DbSet<Role> Roles { get; set; }
     }
 }

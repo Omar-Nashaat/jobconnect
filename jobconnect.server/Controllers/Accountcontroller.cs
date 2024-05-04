@@ -1,126 +1,82 @@
-﻿using Jobconnect.Models;
-using Microsoft.AspNetCore.Identity;
+﻿using AutoMapper;
+using JobConnect.DTOs;
+using JobConnect.Interfaces;
+using JobConnect.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+using JobConnect.Interfaces;
 
-namespace Jobconnect.Controllers
+
+namespace JobConnect.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly UserManager<AppUser> _userManager;
-        private readonly IConfiguration configuration;
+        private readonly IAuthRepository<User> _authRepo;
+        private readonly IDataRepository<User> _userRepo;
+        private readonly IDataRepository<Role> _userRoleRepo;
+        private readonly IConfiguration _configuration;
+        private readonly IMapper _mapper;
 
-        public AccountController(UserManager<AppUser> userManager , IConfiguration configuration)
+        public AccountController(IAuthRepository<User> authRepo, IDataRepository<User> userRepo, IDataRepository<Role> userRoleRepo, IConfiguration configuration, IMapper mapper)
         {
-            _userManager = userManager;
-            this.configuration = configuration;
+            _authRepo = authRepo;
+            _userRepo = userRepo;
+            _userRoleRepo = userRoleRepo;
+            _configuration = configuration;
+            _mapper = mapper;
         }
 
-        [HttpPost("Register")]
-        public async Task<IActionResult> RegisterNewUser(dtoNewUser user)
+
+        [HttpPost("login")]
+        public async Task<ActionResult> Login(LoginDto userForLoginDto)
         {
-            if (ModelState.IsValid)
+            // Check if email or password is null or empty
+            if (string.IsNullOrEmpty(userForLoginDto.Email) || string.IsNullOrEmpty(userForLoginDto.Password))
             {
-                var appUser = new AppUser
-                {
-                    UserName = user.Name,
-                    Email = user.Email
-                };
-
-                var result = await _userManager.CreateAsync(appUser, user.Password);
-
-                if (result.Succeeded)
-                {
-                    return Ok("Success");
-                }
-                else
-                {
-                    foreach (var error in result.Errors)
-                    {
-                        ModelState.AddModelError("", error.Description);
-                    }
-                }
+                return BadRequest("Email or password cannot be null or empty.");
             }
 
-            return BadRequest(ModelState);
-        }
+            var token = await _authRepo.Login(userForLoginDto.Email.ToLower(), userForLoginDto.Password);
 
-        [HttpPost]
-        public async Task<IActionResult> LogIn(dtoLogin login)
-        {
-            if (ModelState.IsValid)
+            if (token == null)
             {
-                AppUser user = await _userManager.FindByEmailAsync(login.Email);
-                if (user != null)
-                {
-                    if (await _userManager.CheckPasswordAsync(user, login.Password))
-                    {
-                        var claims = new List<Claim>();
-                        claims.Add(new Claim (ClaimTypes.Email ,user.Email));
-                        claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id));
-                        claims.Add(new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()));
-                        var roles = await _userManager.GetRolesAsync(user);
-                        foreach(var role in roles)
-                        {
-                            claims.Add(new Claim(ClaimTypes.Role, role.ToString()));
-
-                        }
-                        //signingCredentials
-                        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:SecretKey"]));
-
-
-                        // Check if key size is sufficient
-                        if (key.KeySize < 256)
-                        {
-                            // Generate a new key with sufficient size
-                            var newKey = new byte[32]; // 256 bits / 8 = 32 bytes
-                            using (var rng = RandomNumberGenerator.Create())
-                            {
-                                rng.GetBytes(newKey);
-                            }
-                            key = new SymmetricSecurityKey(newKey);
-                        }
-
-                        var sc = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-                        var token = new JwtSecurityToken(
-                            claims: claims,
-                            issuer: configuration["JWT:Issuer"],
-                            audience: configuration["JWT:Audience"],
-                            expires: DateTime.Now.AddMonths(1),
-                            signingCredentials: sc
-                            );
-
-                               var _token = new
-                        {
-                            token = new JwtSecurityTokenHandler().WriteToken(token),
-                            expiration = token.ValidTo,
-                        };
-                        return Ok(_token);
-
-
-
-                    }
-                    else
-                    {
-                        ModelState.AddModelError("Password", "Password is incorrect");
-                        return BadRequest(ModelState);
-                    }
-                }
-                else
-                {
-                    ModelState.AddModelError("Email", "User does not exist");
-                    return BadRequest(ModelState);
-                }
+                return Unauthorized("Incorrect email or password.");
             }
-            return BadRequest(ModelState);
+
+            return Ok(new { message = "Login successfully", 
+                token = token });
         }
+
+
+
+        [HttpGet("getAllRoles")]
+        public async Task<ActionResult<IEnumerable<UserRoleDto>>> GetAllRoles()
+        {
+            var roles = await _userRoleRepo.GetAll();
+
+            var returnedRoles = _mapper.Map<IEnumerable<UserRoleDto>>(roles);
+            return Ok(returnedRoles);
+        }
+
+
+
+        [HttpPost("register")]
+        public async Task<ActionResult<RegisterDto>> Register([FromBody] RegisterDto userForRegisterDto)
+        {
+            userForRegisterDto.Email = userForRegisterDto.Email.ToLower();
+            if (await _authRepo.UserExist(userForRegisterDto.Email))
+            {
+                return BadRequest("Email already exists");
+            }
+
+            var mappedUser = _mapper.Map<User>(userForRegisterDto);
+
+            var user = await _authRepo.Register(mappedUser, userForRegisterDto.Password);
+
+            return Ok(user);
+        }
+
     }
 }
-

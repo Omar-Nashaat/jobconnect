@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\build\Jobconnect.props" />
+  <Import Project="..\build\JobConnect.props" />
 </Project>

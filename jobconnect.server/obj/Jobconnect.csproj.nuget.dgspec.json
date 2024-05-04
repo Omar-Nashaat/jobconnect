@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Projects\\jobConnect\\Jobconnect.server\\Jobconnect.csproj": {}
+    "f:\\Projects\\jobConnect\\Jobconnect.server\\JobConnect.csproj": {}
   },
   "projects": {
-    "F:\\Projects\\jobConnect\\Jobconnect.server\\Jobconnect.csproj": {
+    "f:\\Projects\\jobConnect\\Jobconnect.server\\JobConnect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Projects\\jobConnect\\Jobconnect.server\\Jobconnect.csproj",
-        "projectName": "Jobconnect",
-        "projectPath": "F:\\Projects\\jobConnect\\Jobconnect.server\\Jobconnect.csproj",
+        "projectUniqueName": "f:\\Projects\\jobConnect\\Jobconnect.server\\JobConnect.csproj",
+        "projectName": "JobConnect",
+        "projectPath": "f:\\Projects\\jobConnect\\Jobconnect.server\\JobConnect.csproj",
         "packagesPath": "C:\\Users\\ammar\\.nuget\\packages\\",
-        "outputPath": "F:\\Projects\\jobConnect\\Jobconnect.server\\obj\\",
+        "outputPath": "f:\\Projects\\jobConnect\\Jobconnect.server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ammar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,11 +43,15 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.4, )"
             },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+            "Microsoft.AspNetCore.SpaProxy": {
               "target": "Package",
               "version": "[8.0.4, )"
             },
@@ -55,7 +59,9 @@
               "target": "Package",
               "version": "[8.0.4, )"
             },
-            "Microsoft.EntityFrameworkCore.InMemory": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.4, )"
             },
@@ -73,9 +79,17 @@
               "target": "Package",
               "version": "[8.0.2, )"
             },
+            "ServiceStack": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.Linq": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
